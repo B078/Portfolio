@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header class="header">
+        <button href="#" class="header__logo" id="colorSwitch">Portfolio</button>
+        
+
+        <nav class="header__nav nav">
+            <a href="" class="nav__item scroll" data-target=".skills">Skills</a>
+            <a href="" class="nav__item scroll" data-target=".project">projects</a>
+            <a href="" class="nav__item scroll" data-target=".about">About</a>
+        </nav>
+
+    </header>
+    <section class="home">
+        <div class="home__img">
+            <img src="assets/IMG_20230429_195035_545 (1).jpg" alt="">
+        </div>
+        <div class="home__content content">
+            <h1>Hi, It's <span>Björn</span></h1>
+            <h3 class="typing-text">I'm a <span id="typewriter"></span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nam totam ab mollitia facere at, eos aliquam exercitationem maiores tempora laudantium obcaecati eius quo atque, tempore molestiae delectus a laborum!</p>
+            <div class="content__icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/B078" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/bjornv_078" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a id="scroll-button" class="scroll-button scroll"  data-target=".skills" title="scroll down"><i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+    </section>
+    <section class="skills">
+        <div class="skills__title">
+            <h1>Web Development Skills</h1>
+        </div>
+        <div class="skills__content content">
+            <ul class="content__list">
+                <li><i class="fa-brands fa-html5"></i> <span>HTML</span></li>
+                <li><i class="fa-brands fa-css3-alt"></i> <span>CSS (SASS)</span></li>
+                <li><i class="fa-brands fa-js"></i> <span>JavaScript</span></li>
+                <li><i class="fa-solid fa-database"></i> <span>MySQL</span></li>
+                <li><i class="fa-brands fa-laravel"></i> <span>Laravel</span></li>
+            </ul>
+        </div>
+    </section>
+    <div class="line"></div>
+    <section class="project">
+        <div class="project__title">
+            <h1>Projects</h1>
+        </div>
+        <div class="project__content content">
+            <div class="content__item">
+                <h2>Social links</h2>
+                <img src="assets/image.png" alt="" loading="lazy">
+                <a href="https://developerintermix.github.io/bjorn4.github.io/" target="_blank" title="Click to view my project">View project</a>
+            </div>
+            <div class="content__item">
+                <h2>FAQ Accordion</h2>
+                <img src="assets/mortgatemobile.PNG" alt="" loading="lazy">
+                <a href="https://developerintermix.github.io/bjorn2.github.io/" target="_blank" title="Click to view my project">View project</a>
+            </div>
+            <div class="content__item">
+                <h2>Recipe Omelette</h2>
+                <img src="assets/recipemobile.PNG" alt="" loading="lazy">
+                <a href="https://developerintermix.github.io/bjorn2.github.io/" target="_blank" title="Click to view my project">View project</a>
+            </div>
+            <div class="content__item">
+                <h2>Earth</h2>
+                <img src="assets/earth.PNG" alt="" loading="lazy">
+                <a href="https://developerintermix.github.io/bjorn2.github.io/" target="_blank" title="Click to view my project">View project</a>
+            </div>
+            <div class="content__item">
+                <h2>test</h2>
+                <img src="assets/image.png" alt="" loading="lazy">
+                <a href="https://developerintermix.github.io/bjorn2.github.io/" target="_blank" title="Click to view my project">View project</a>
+            </div>
+            <div class="content__item">
+                <h2>test</h2>
+                <img src="assets/image.png" alt="" loading="lazy">
+                <a href="https://developerintermix.github.io/bjorn2.github.io/" target="_blank" title="Click to view my project">View project</a>
+            </div>
+        </div>
+    </section>
+    <div class="line"></div>
+    <section class="about">
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur sed explicabo laboriosam quasi asperiores non. Temporibus esse quod et iusto in, dolorem totam maiores nam accusantium. In enim tempora quam.</div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
