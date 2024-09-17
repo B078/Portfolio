@@ -48,74 +48,102 @@ function type() {
 
 type();
 
-document.querySelectorAll('.scroll').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('data-target'));
-        
-        // Check if the target exists before attempting to scroll
-        if (target) {
-            document.title = `Portfolio | ${target.getAttribute('data-title')}`;
-            target.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            console.error('Target not found:', this.getAttribute('data-target'));
-        }
-    });
-});
-
-
-document.getElementById('colorSwitch').addEventListener('click', () => {
-    let colorValue = prompt('welkle kleur wil je?');
-
-    if (colorValue === null || colorValue.trim() === '') {
-        return; 
-    }
-
-    colorValue = colorValue.trim();
-    if (isValidColor(colorValue)) {
-        console.log(colorValue)
-        // Apply the color to the theme color property --theme-color
-        document.documentElement.style.setProperty('--theme-color', colorValue);
-    } else {
-        // Alert the user if the color is invalid
-        alert('Probeer opnieuw daggoe');
-    }
-
-
-    function isValidColor(color) {
-        const s = new Option().style;
-        s.color = color;
-        return s.color !== '';
-    }
-    })
-
-
-    function updateMeterColors() {
-        document.querySelectorAll('meter').forEach((meter) => {
-            const percentageSpan = meter.nextElementSibling;
-        
-            let value = meter.value;
-            let low = meter.low;
-            let high = meter.high;
-            let optimum = meter.optimum;
-        
-            if (value < low) {
-                percentageSpan.style.color = 'red'; 
-            } else if (value >= low && value <= high) {
-                percentageSpan.style.color = 'orange';  
-            } else if (value > high && value <= optimum) {
-                percentageSpan.style.color = 'green';  
+function setupScrollButtons() {
+    document.querySelectorAll('.scroll').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetSelector = this.getAttribute('data-target');
+            const target = document.querySelector(targetSelector);
+            if (target) {
+                document.title = `Portfolio | ${target.getAttribute('data-title')}`;
+                target.scrollIntoView({ behavior: 'smooth' });
             } else {
-                percentageSpan.style.color = '#FFD700'; 
+                console.error('Target not found:', targetSelector);
             }
         });
+    });
+}
+
+// Color switch functionality
+function setupColorSwitch() {
+    document.getElementById('colorSwitch').addEventListener('click', () => {
+        const colorValue = prompt('Enter the color:');
+        if (colorValue && isValidColor(colorValue)) {
+            document.documentElement.style.setProperty('--theme-color', colorValue.trim());
+        } else {
+            alert('Invalid color. Please try again.');
+        }
+    });
+}
+
+function isValidColor(color) {
+    const s = new Option().style;
+    s.color = color;
+    return s.color !== '';
+}
+
+// Update meter colors based on value
+function updateMeterColors() {
+    document.querySelectorAll('meter').forEach((meter) => {
+        const percentageSpan = meter.nextElementSibling;
+        const value = meter.value;
+        const { low, high, optimum } = meter;
+
+        if (value < low) {
+            percentageSpan.style.color = 'red';
+        } else if (value <= high) {
+            percentageSpan.style.color = 'orange';
+        } else if (value <= optimum) {
+            percentageSpan.style.color = 'green';
+        } else {
+            percentageSpan.style.color = '#FFD700'; // Gold
+        }
+    });
+}
+
+// Scroll to top button functionality
+function setupScrollToTopButton() {
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+    const homeSection = document.querySelector('.home');
+    const skillsSection = document.querySelector('.skills');
+
+    function checkScroll() {
+        const homeRect = homeSection.getBoundingClientRect();
+        const skillsRect = skillsSection.getBoundingClientRect();
+        if (homeRect.bottom < 0 && skillsRect.top <= window.innerHeight) {
+            showScrollToTopButton();
+        } else {
+            hideScrollToTopButton();
+        }
     }
-    
 
+    function showScrollToTopButton() {
+        scrollToTopButton.style.visibility = 'visible';
+        scrollToTopButton.style.opacity = '1';
+    }
+
+    function hideScrollToTopButton() {
+        scrollToTopButton.style.visibility = 'hidden';
+        scrollToTopButton.style.opacity = '0';
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    scrollToTopButton.addEventListener('click', scrollToTop);
+    checkScroll(); // Initial check
+}
+
+// Initialize functionality
+function initialize() {
+    setupScrollButtons();
+    setupColorSwitch();
     updateMeterColors();
-    
-    
+    setupScrollToTopButton();
+}
 
-
+document.addEventListener('DOMContentLoaded', initialize);
 
 
