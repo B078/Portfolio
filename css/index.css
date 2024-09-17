@@ -130,6 +130,7 @@ section {
   border-color: magenta; /* Magenta border for h3 */
 }
 .home__content p {
+  margin-right: 20px;
   font-size: 1.6rem;
   border-color: lightcoral; /* Light coral border for p */
 }
@@ -280,6 +281,13 @@ section {
   font-size: 1.25rem;
   color: var(--theme-color);
   text-decoration: none;
+}
+.skills__content .content__list .percentage {
+  align-self: flex-end;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--theme-color);
+  margin-top: 0.25rem;
 }
 
 .project {

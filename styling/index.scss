@@ -141,6 +141,7 @@ section {
         }
 
         p {
+            margin-right: 20px;
             font-size: 1.6rem;
             border-color: lightcoral; /* Light coral border for p */
         }
@@ -313,6 +314,14 @@ section {
                     color: var(--theme-color);
                     text-decoration: none;
                 }
+            }
+
+            .percentage {
+                align-self: flex-end;
+                font-size: 1rem;
+                font-weight: bold;
+                color: var(--theme-color);
+                margin-top: 0.25rem;
             }
         }
     }

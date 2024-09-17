@@ -90,5 +90,32 @@ document.getElementById('colorSwitch').addEventListener('click', () => {
     })
 
 
+    function updateMeterColors() {
+        document.querySelectorAll('meter').forEach((meter) => {
+            const percentageSpan = meter.nextElementSibling;
+        
+            let value = meter.value;
+            let low = meter.low;
+            let high = meter.high;
+            let optimum = meter.optimum;
+        
+            if (value < low) {
+                percentageSpan.style.color = 'red'; 
+            } else if (value >= low && value <= high) {
+                percentageSpan.style.color = 'orange';  
+            } else if (value > high && value <= optimum) {
+                percentageSpan.style.color = 'green';  
+            } else {
+                percentageSpan.style.color = '#FFD700'; 
+            }
+        });
+    }
+    
+
+    updateMeterColors();
+    
+    
+
+
 
 
