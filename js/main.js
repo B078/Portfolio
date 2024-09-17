@@ -55,7 +55,8 @@ document.querySelectorAll('.scroll').forEach(button => {
         
         // Check if the target exists before attempting to scroll
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });  // Optional: smooth scrolling
+            document.title = `Portfolio | ${target.getAttribute('data-title')}`;
+            target.scrollIntoView({ behavior: 'smooth' });
         } else {
             console.error('Target not found:', this.getAttribute('data-target'));
         }
@@ -64,7 +65,7 @@ document.querySelectorAll('.scroll').forEach(button => {
 
 
 document.getElementById('colorSwitch').addEventListener('click', () => {
-    let colorValue = prompt('What color do you want');
+    let colorValue = prompt('welkle kleur wil je?');
 
     if (colorValue === null || colorValue.trim() === '') {
         return; 

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="assets/portfolio (1).png" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -15,7 +16,7 @@
         <nav class="header__nav nav">
             <a href="" class="nav__item scroll" data-target=".skills">Skills</a>
             <a href="" class="nav__item scroll" data-target=".project">projects</a>
-            <a href="" class="nav__item scroll" data-target=".about">About</a>
+            <a href="" class="nav__item scroll" data-target=".knowledge">knowledge</a>
         </nav>
 
     </header>
@@ -36,7 +37,7 @@
             <a id="scroll-button" class="scroll-button scroll"  data-target=".skills" title="scroll down"><i class="fa-solid fa-arrow-down"></i></a>
         </div>
     </section>
-    <section class="skills">
+    <section class="skills" data-title="Skills">
         <div class="skills__title">
             <h1>Web Development Skills</h1>
         </div>
@@ -51,45 +52,69 @@
         </div>
     </section>
     <div class="line"></div>
-    <section class="project">
+    <section class="project" data-title="Projects">
         <div class="project__title">
             <h1>Projects</h1>
         </div>
         <div class="project__content content">
             <div class="content__item">
                 <h2>Social links</h2>
-                <img src="assets/image.png" alt="" loading="lazy">
-                <a href="https://developerintermix.github.io/bjorn4.github.io/" target="_blank" title="Click to view my project">View project</a>
+                <div class="image-container">
+                    <img src="assets/image.png" alt="" loading="lazy">
+                    <div class="overlay">
+                        <a href="https://developerintermix.github.io/bjorn4.github.io/" target="_blank" title="Click to view my project" class="overlay-button">View project</a>
+                    </div>
+                </div>
             </div>
             <div class="content__item">
                 <h2>FAQ Accordion</h2>
-                <img src="assets/mortgatemobile.PNG" alt="" loading="lazy">
-                <a href="https://developerintermix.github.io/bjorn2.github.io/" target="_blank" title="Click to view my project">View project</a>
+                <div class="image-container">
+                    <img src="assets/faq.PNG" alt="" loading="lazy">
+                    <div class="overlay">
+                        <a href="https://developerintermix.github.io/bjorn2.github.io/" target="_blank" title="Click to view my project" class="overlay-button">View project</a>
+                    </div>
+                </div>
             </div>
             <div class="content__item">
                 <h2>Recipe Omelette</h2>
-                <img src="assets/recipemobile.PNG" alt="" loading="lazy">
-                <a href="https://developerintermix.github.io/bjorn2.github.io/" target="_blank" title="Click to view my project">View project</a>
+                <div class="image-container">
+                    <img src="assets/recipemobile.PNG" alt="" loading="lazy">
+                    <div class="overlay">
+                        <a href="https://developerintermix.github.io/bjorn.github.io/" target="_blank" title="Click to view my project" class="overlay-button">View project</a>
+                    </div>
+                </div>
             </div>
             <div class="content__item">
                 <h2>Earth</h2>
-                <img src="assets/earth.PNG" alt="" loading="lazy">
-                <a href="https://developerintermix.github.io/bjorn2.github.io/" target="_blank" title="Click to view my project">View project</a>
+                <div class="image-container">
+                    <img src="assets/earth.PNG" alt="" loading="lazy">
+                    <div class="overlay">
+                        <a href="https://developerintermix.github.io/bjorn4.github.io/" target="_blank" title="Click to view my project" class="overlay-button">View project</a>
+                    </div>
+                </div>
             </div>
             <div class="content__item">
                 <h2>test</h2>
-                <img src="assets/image.png" alt="" loading="lazy">
-                <a href="https://developerintermix.github.io/bjorn2.github.io/" target="_blank" title="Click to view my project">View project</a>
+                <div class="image-container">
+                    <img src="assets/image.png" alt="" loading="lazy">
+                    <div class="overlay">
+                        <a href="https://developerintermix.github.io/bjorn4.github.io/" target="_blank" title="Click to view my project" class="overlay-button">View project</a>
+                    </div>
+                </div>
             </div>
             <div class="content__item">
                 <h2>test</h2>
-                <img src="assets/image.png" alt="" loading="lazy">
-                <a href="https://developerintermix.github.io/bjorn2.github.io/" target="_blank" title="Click to view my project">View project</a>
+                <div class="image-container">
+                    <img src="assets/image.png" alt="" loading="lazy">
+                    <div class="overlay">
+                        <a href="https://developerintermix.github.io/bjorn4.github.io/" target="_blank" title="Click to view my project" class="overlay-button">View project</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <div class="line"></div>
-    <section class="about">
+    <section class="knowledge" data-title="knowledge">
         <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur sed explicabo laboriosam quasi asperiores non. Temporibus esse quod et iusto in, dolorem totam maiores nam accusantium. In enim tempora quam.</div>
     </section>
     <script src="js/main.js"></script>
