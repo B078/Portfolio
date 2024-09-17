@@ -258,47 +258,49 @@ section {
             justify-content: space-between; 
             list-style: none;
             padding: 2rem 1rem 0 1rem;
-            gap: 1rem; 
+            gap: 2rem; 
 
             li {
                 width: 30%;
                 background-color: black;
                 border: 1px solid #ffffff; 
                 border-radius: 8px; 
-                padding: 1rem;
+                padding: 1rem 2rem;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: space-around;
                 align-items: center;
-                text-align: center;
                 transition: transform 0.3s ease; 
 
                 &:nth-child(1) {
-                    color: red;
+                    color: #ff5733;
                 }
                 &:nth-child(2) {
-                    color: rgb(30, 161, 201);
+                    color: rgb(255, 238, 0)
                 }
                 &:nth-child(3) {
-                    color: rgb(255, 238, 0);
+                    color: rgb(30, 161, 201);
                 }
                 &:nth-child(4) {
-                    color: rgb(0, 60, 255);
+                    color: #ff0000;
                 }
                 &:nth-child(5) {
-                    color: #ff0000;
+                    color: rgb(255, 238, 0);
+                }
+                &:nth-child(6) {
+                    color: rgb(0, 60, 255);
                 }
 
                 span {
                     color: white;
                     font-weight: bold;
                     font-size: 1.2rem;
-                    margin-top: 0.5rem;
                 }
                 
                 i {
                     font-size: 2rem;
-                    margin-bottom: 0.5rem;
+
                 }
 
                 &:hover {
@@ -317,7 +319,6 @@ section {
             }
 
             .percentage {
-                align-self: flex-end;
                 font-size: 1rem;
                 font-weight: bold;
                 color: var(--theme-color);
