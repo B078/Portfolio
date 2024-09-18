@@ -469,20 +469,20 @@ section {
     right: 20px;
     width: 50px; 
     height: 50px;
-    background-color: #47dea2; /* Match with your color theme */
+    background-color: #47dea2;
     border: none;
     color: white;
-    border-radius: 50%; /* Make the button circular */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem; /* Adjust font size as needed */
+    font-size: 1.2rem; 
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: #3b9e8a; /* Slightly darker shade on hover */
+        background-color: #3b9e8a; 
     }
 }
 

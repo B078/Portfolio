@@ -129,6 +129,7 @@ function setupScrollToTopButton() {
 
     function scrollToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.title = `Portfolio`;
     }
 
     window.addEventListener('scroll', checkScroll);
